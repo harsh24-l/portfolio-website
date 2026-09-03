@@ -33,7 +33,7 @@ function Sidebar({ isOpen, setIsOpen }) {
     <aside className={`sidebar ${isOpen ? 'active' : ''}`}>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="/assets/images/harsh-raj.jpg" alt="Harsh Raj" width="120" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = '/assets/images/my-avatar.png'; }} />
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGLr-WoCqW66y5PWkPvH5SNtB-LaGXPppFWK3mCVwBJ7_0FXG73yp2T9X8rK4fGow2MBI8XP7q3KkeBAErHdknoRrQgKRF_k8sCvDm0MdsczzxYnXf0WbKDpZYYjmLrox-6w2sPxEGGalI6K5CjmF6a-edhFyct9K1E-C781lkkjbjc75bU5FZckARSu33/s320/20230115054722__MG_0127_1.jpg" alt="Harsh Raj" width="120" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = '/assets/images/harsh-raj.jpg'; }} />
         </figure>
         <div className="info-content"><h1 className="name">Harsh Raj</h1><p className="title">Full-Stack Developer</p></div>
         <button className="info_more-btn" onClick={() => setIsOpen(!isOpen)}><span>Show contacts</span><Icon name="chevron-down" /></button>
