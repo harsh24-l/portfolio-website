@@ -1,16 +1,26 @@
 import { useState } from 'react';
+import harshRaj from '../assets/images/harsh-raj.jpg';
+import project1 from '../assets/images/project-1.jpg';
+import project2 from '../assets/images/project-2.png';
+import project3 from '../assets/images/project-3.jpg';
+import project4 from '../assets/images/project-4.png';
+import project5 from '../assets/images/project-5.png';
+import project6 from '../assets/images/project-6.png';
+import project7 from '../assets/images/project-7.png';
+import project8 from '../assets/images/project-8.jpg';
+import project9 from '../assets/images/project-9.png';
 
 const projects = [
-  { title: 'Full-Stack Job Portal', category: 'Web development', image: 'project-7.png', href: 'https://github.com/harsh24-l/full-stack-job-portal' },
-  { title: 'Employee Management System', category: 'Web development', image: 'project-2.png' },
-  { title: 'Web Screen Recorder', category: 'Applications', image: 'project-8.jpg' },
-  { title: 'Video Call Web App', category: 'Applications', image: 'project-4.png' },
-  { title: 'News4U', category: 'Web development', image: 'project-1.jpg' },
-  { title: 'Language Learning Website', category: 'Web development', image: 'project-9.png' },
-  { title: 'Task Management App', category: 'Applications', image: 'project-3.jpg' },
-  { title: 'Analytics Dashboard', category: 'Web development', image: 'project-5.png' },
-  { title: 'Responsive UI System', category: 'Web development', image: 'project-6.png' },
-  { title: 'Mobile Productivity App', category: 'Applications', image: 'project-4.png' },
+  { title: 'Full-Stack Job Portal', category: 'Web development', image: project7, href: 'https://github.com/harsh24-l/full-stack-job-portal' },
+  { title: 'Employee Management System', category: 'Web development', image: project2 },
+  { title: 'Web Screen Recorder', category: 'Applications', image: project8 },
+  { title: 'Video Call Web App', category: 'Applications', image: project4 },
+  { title: 'News4U', category: 'Web development', image: project1 },
+  { title: 'Language Learning Website', category: 'Web development', image: project9 },
+  { title: 'Task Management App', category: 'Applications', image: project3 },
+  { title: 'Analytics Dashboard', category: 'Web development', image: project5 },
+  { title: 'Responsive UI System', category: 'Web development', image: project6 },
+  { title: 'Mobile Productivity App', category: 'Applications', image: project4 },
 ];
 
 const navItems = ['About', 'Education', 'Skills', 'Projects', 'Contact'];
@@ -33,7 +43,7 @@ function Sidebar({ isOpen, setIsOpen }) {
     <aside className={`sidebar ${isOpen ? 'active' : ''}`}>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGLr-WoCqW66y5PWkPvH5SNtB-LaGXPppFWK3mCVwBJ7_0FXG73yp2T9X8rK4fGow2MBI8XP7q3KkeBAErHdknoRrQgKRF_k8sCvDm0MdsczzxYnXf0WbKDpZYYjmLrox-6w2sPxEGGalI6K5CjmF6a-edhFyct9K1E-C781lkkjbjc75bU5FZckARSu33/s320/20230115054722__MG_0127_1.jpg" alt="Harsh Raj" width="120" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = '/assets/images/harsh-raj.jpg'; }} />
+          <img src={harshRaj} alt="Harsh Raj" width="120" />
         </figure>
         <div className="info-content"><h1 className="name">Harsh Raj</h1><p className="title">Full-Stack Developer</p></div>
         <button className="info_more-btn" onClick={() => setIsOpen(!isOpen)}><span>Show contacts</span><Icon name="chevron-down" /></button>
@@ -72,7 +82,7 @@ function Skills() {
 function Portfolio() {
   const [filter, setFilter] = useState('All');
   const visibleProjects = filter === 'All' ? projects : projects.filter((project) => project.category === filter);
-  return <><header><p className="eyebrow">Selected work</p><h2 className="h2 article-title">10 Projects</h2></header><section className="projects"><ul className="filter-list">{['All', 'Web development', 'Applications'].map((item) => <li className="filter-item" key={item}><button className={filter === item ? 'active' : ''} onClick={() => setFilter(item)}>{item}</button></li>)}</ul><ul className="project-list">{visibleProjects.map((project) => <li className="project-item active" key={project.title}><a href={project.href || '#'} target={project.href ? '_blank' : undefined} rel={project.href ? 'noreferrer' : undefined}><figure className="project-img"><div className="project-item-icon-box"><Icon name="open-outline" /></div><img src={`/assets/images/${project.image}`} alt={project.title} loading="lazy" /></figure><h3 className="project-title">{project.title}</h3><p className="project-category">{project.category}</p></a></li>)}</ul></section></>;
+  return <><header><p className="eyebrow">Selected work</p><h2 className="h2 article-title">10 Projects</h2></header><section className="projects"><ul className="filter-list">{['All', 'Web development', 'Applications'].map((item) => <li className="filter-item" key={item}><button className={filter === item ? 'active' : ''} onClick={() => setFilter(item)}>{item}</button></li>)}</ul><ul className="project-list">{visibleProjects.map((project) => <li className="project-item active" key={project.title}><a href={project.href || '#'} target={project.href ? '_blank' : undefined} rel={project.href ? 'noreferrer' : undefined}><figure className="project-img"><div className="project-item-icon-box"><Icon name="open-outline" /></div><img src={project.image} alt={project.title} loading="lazy" /></figure><h3 className="project-title">{project.title}</h3><p className="project-category">{project.category}</p></a></li>)}</ul></section></>;
 }
 
 function Contact() {
