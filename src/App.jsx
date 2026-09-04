@@ -12,7 +12,7 @@ import project9 from '../assets/images/project-9.png';
 
 const projects = [
   { title: 'Full-Stack Job Portal', category: 'Web development', image: project7, href: 'https://github.com/harsh24-l/full-stack-job-portal' },
-  { title: 'Employee Management System', category: 'Web development', image: project2 },
+  { title: 'Employee Management System', category: 'Web development', image: project2, href; 'https://harshitems.vercel.app/manager-dashboard' }
 
 ];
 
