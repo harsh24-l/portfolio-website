@@ -13,14 +13,7 @@ import project9 from '../assets/images/project-9.png';
 const projects = [
   { title: 'Full-Stack Job Portal', category: 'Web development', image: project7, href: 'https://github.com/harsh24-l/full-stack-job-portal' },
   { title: 'Employee Management System', category: 'Web development', image: project2 },
-  { title: 'Web Screen Recorder', category: 'Applications', image: project8 },
-  { title: 'Video Call Web App', category: 'Applications', image: project4 },
-  { title: 'News4U', category: 'Web development', image: project1 },
-  { title: 'Language Learning Website', category: 'Web development', image: project9 },
-  { title: 'Task Management App', category: 'Applications', image: project3 },
-  { title: 'Analytics Dashboard', category: 'Web development', image: project5 },
-  { title: 'Responsive UI System', category: 'Web development', image: project6 },
-  { title: 'Mobile Productivity App', category: 'Applications', image: project4 },
+
 ];
 
 const navItems = ['About', 'Education', 'Skills', 'Projects', 'Contact'];
